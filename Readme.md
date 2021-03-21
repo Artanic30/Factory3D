@@ -1,3 +1,18 @@
+# 项目效果
+
+### 点击事件
+
+![img](https://github.com/Artanic30/Factory3D/blob/master/assets/click.jpg)
+
+### 荧光边缘
+
+![img](https://github.com/Artanic30/Factory3D/blob/master/assets/bloom.jpg)
+
+
+### html铭牌
+
+![img](https://github.com/Artanic30/Factory3D/blob/master/assets/sprite_card.jpg)
+
 # 配置文件介绍
 
 ### allow_move：
