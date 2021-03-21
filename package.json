@@ -1,0 +1,27 @@
+{
+  "name": "three",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config build/webpack.config.js",
+    "dev": "webpack-dev-server --config build/webpack.config.js",
+    "example": "webpack-dev-server --config build/webpack.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.5.1",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "aframe": "^1.1.0",
+    "html2canvas": "^1.0.0-rc.7",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.20",
+    "three": "^0.124.0"
+  }
+}
