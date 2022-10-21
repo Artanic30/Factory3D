@@ -1,0 +1,604 @@
+{
+  "allow_move": true,
+  "model_path": "./pc_fbx/machine.FBX",
+  "camera_position": {
+    "x": 1500,
+    "y": 100,
+    "z": 2200
+  },
+  "target_position": {
+    "x": 1400,
+    "y": 50,
+    "z": 2000
+  },
+  "background": "black",
+  "status_style": {
+    "opacity": 0.9,
+    "emissiveIntensity": 0.2,
+    "edgeStrength": 5,
+    "edgeThickness": 2,
+    "pulsePeriod": 3,
+    "edgeGlow": 0.5,
+    "offline": {
+      "color": "0x000000",
+      "border_color": "0xdddddd",
+      "blocked_border_color": "0x000000"
+    },
+    "error": {
+      "color": "0xff5f2e",
+      "border_color": "0xff5f2e",
+      "blocked_border_color": "0x000000"
+    },
+    "pending": {
+      "color": "0xfdd032",
+      "border_color": "0xfdd032",
+      "blocked_border_color": "0x000000"
+    }
+  },
+  "highlight_style": {
+    "color": "0x15e8d1",
+    "opacity": 0.9,
+    "emissiveIntensity": 0.2
+  },
+  "card_style": {
+    "height": 250
+  },
+  "card_update": {
+    "event_name": "update_card"
+  },
+  "scene_summary": {
+    "event_name": "scene_summary"
+  },
+  "light_settings": {
+    "point_light": [
+    ],
+    "direct_light": [
+      {
+        "position": {
+          "x": 1200,
+          "y": 200,
+          "z": 2500
+        },
+        "color": "0xff5f2e",
+        "angle": 60,
+        "intensity": 1
+      }
+    ],
+    "ambient_light": {
+      "color": "0x92FDFF",
+      "intensity": 1
+    }
+  },
+  "loaded_callback": {
+    "event_name": "object_loaded"
+  },
+  "object_settings": {
+    "group77_group59": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group60": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group61": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group62": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group64": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group63": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group65": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group66": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group67": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group69": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group68": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group70": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group72": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group71": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group73": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group75": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group74": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group76": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group75": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group81": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group71": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group73": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group72": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group74": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group80": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group70": {
+      "is_interactive": true,
+      "status": "offline",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": true,
+      "click_actions":{
+        "type": "toLink",
+        "link": "www.baidu.com"
+      }
+    },
+    "group78_group59": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group76": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group63": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group64": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group68": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": {
+        "type": "showCard"
+      }
+    },
+    "group78_group62": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group61": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group60": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group79": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group69": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": {
+        "type": "showCard"
+      }
+    },
+    "group78_group67": {
+      "is_interactive": true,
+      "status": "error",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": {
+        "type": "changeColor",
+        "color": "0x15e8d1"
+      }
+    },
+    "group78_group65": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group66": {
+      "is_interactive": true,
+      "status": "pending",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": true,
+      "click_actions": {
+        "type": "callback",
+        "event_name": "click_object"
+      }
+    },
+    "group77_group59": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group60": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group61": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group62": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group64": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group63": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group65": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group66": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group67": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group69": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group68": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group70": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group72": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group71": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group73": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group75": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group74": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group77_group76": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group75": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group81": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group71": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group73": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group72": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group74": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group80": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group59": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group76": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group63": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group64": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group62": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group61": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group60": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group79": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    },
+    "group78_group65": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": null
+    }
+  },
+  "change_color_outside": {
+    "event_name": "change_color"
+  }
+}

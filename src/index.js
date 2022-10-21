@@ -33,6 +33,40 @@ class Three {
         this.sceneDom.setAttribute('wasd-controls', {enabled: false})
         this.cameraDom.setAttribute('wasd-controls', {enabled: false})
 
+        let light_config = config.light_settings
+        light_config.point_light.map(con => {
+            let light_dom = document.createElement('a-light')
+            light_dom.setAttribute('type', 'point')
+            light_dom.setAttribute('color', parseInt(con.color, 16))
+            light_dom.setAttribute("position", `${con.position.x} ${con.position.y} ${con.position.z}`)
+            light_dom.setAttribute('decay', con.decay)
+            light_dom.setAttribute('ground-color', parseInt(con.ground_color, 16))
+            light_dom.setAttribute('intensity', con.intensity)
+
+            this.sceneDom.appendChild(light_dom)
+        })
+
+        light_config.direct_light.map(con => {
+            let light_dom = document.createElement('a-light')
+            light_dom.setAttribute('color', parseInt(con.color, 16))
+            light_dom.setAttribute("position", `${con.position.x} ${con.position.y} ${con.position.z}`)
+            light_dom.setAttribute('intensity', con.intensity)
+            light_dom.setAttribute('angle', con.angle)
+
+            this.sceneDom.appendChild(light_dom)
+        })
+
+        let ambient_color = light_config.ambient_light.color
+        let light_dom = document.createElement('a-light')
+        light_dom.setAttribute('type', 'ambient')
+        light_dom.setAttribute('color', parseInt(ambient_color, 16))
+        light_dom.setAttribute('intensity', light_config.ambient_light.intensity)
+        this.sceneDom.appendChild(light_dom)
+
+        document.body.append(this.rootDom)
+        this.rootDom.appendChild(this.sceneDom)
+        this.sceneDom.appendChild(this.cameraDom)
+
 
         let cls_inst = this
         AFRAME.registerSystem('outlineEffects', {
@@ -105,25 +139,29 @@ class Three {
                 outlinePassPending.edgeGlow = style_config.edgeGlow
 
 
+
+
                 let effectFXAA = new ShaderPass(FXAAShader);
                 effectFXAA.uniforms['resolution'].value.set(1 / window.innerWidth, 1 / window.innerHeight);
-
-                composer.addPass(outlinePassOffline)
-                composer.addPass(outlinePassPending)
+                // Order matters!!!!!
                 composer.addPass(renderPass)
                 composer.addPass(outlinePassError)
+                composer.addPass(outlinePassOffline)
+                composer.addPass(outlinePassPending)
                 composer.addPass(effectFXAA)
 
                 this.composer = composer;
 
                 cls_inst.outlinePassError = outlinePassError
                 cls_inst.outlinePassOffline = outlinePassOffline
+                cls_inst.outlinePassPending = outlinePassPending
 
 
                 window.addEventListener('resize', () => {
                     camera.aspect = window.innerWidth / window.innerHeight
                     camera.updateProjectionMatrix()
                     renderer.setSize(window.innerWidth, window.innerHeight)
+                    effectFXAA.uniforms['resolution'].value.set(1 / window.innerWidth, 1 / window.innerHeight);
                 }, false)
 
                 this.bind();
@@ -175,6 +213,10 @@ class Three {
                     type: "array",
                     "default": []
                 },
+                rayCaster: {
+                    type: "array",
+                    "default": null
+                },
                 originalMaterial: {
                     type: "array",
                     "default": []
@@ -206,6 +248,15 @@ class Three {
                     this.sum_object += 1
                 }
             },
+            decode_group(item, object_config, object_names) {
+                if (item instanceof THREE.Mesh) {
+                    this.init_mesh(item, object_config, object_names)
+                } else if (item instanceof THREE.Group) {
+                    item.children.map( child => {
+                        this.decode_group(child, object_config, object_names)
+                    })
+                }
+            },
             init: function () {
                 let data = this.data;
                 let scene = this.el.sceneEl.object3D;
@@ -225,6 +276,13 @@ class Three {
                     let object_config = cls_inst.config.object_settings
 
                     this.decode_group(obj, object_config, object_names)
+                    // let re = ''
+                    // let html_template = `<div style=\\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\\">    <h4 style=\\"color: #000; \\">Hello world!</h4><h4 style=\\"color: #000; \\">template</h4></div>`
+                    // object_names.map(name => {
+                    //     re += `"${name}": {\n "is_interactive": true,\n "status": "normal",\n "card_html": "${html_template}", \n"show_card": false, \n"click_actions": null\n},\n`
+                    // })
+                    // console.log(re)
+                    // debugger
 
                     let summary_config = cls_inst.config.scene_summary
                     window.parent.postMessage({
@@ -237,7 +295,88 @@ class Three {
 
                     let update_card = cls_inst.config.card_update
                     let color_config = cls_inst.config.change_color_outside
-                    
+                    window.addEventListener("message", res => {
+                        if (res.data.type === update_card.event_name) {
+                            let spr_data = res.data.payload
+                            if (spr_data) {
+                                data.current_sprites.map(spr => {
+                                    if (spr_data.hasOwnProperty(spr.name)) {
+                                        let iframe=document.createElement('iframe');
+                                        document.body.appendChild(iframe);
+                                        let iframeDoc=iframe.contentDocument||iframe.contentWindow.document;
+                                        iframeDoc.body.innerHTML=spr_data[spr.name];
+                                        html2canvas(iframeDoc.body).then(canvas => {
+                                            document.body.removeChild(iframe);
+                                            const texture = new THREE.CanvasTexture(canvas)
+                                            texture.minFilter = THREE.LinearFilter
+                                            texture.needsUpdate = false
+                                            spr.material.map = texture
+                                        });
+                                    }
+                                })
+                            }
+                        } else if (res.data.type === color_config.event_name) {
+                            let click_data = res.data.payload
+                            if (click_data) {
+                                let obj_name = click_data.id
+                                let obj_color = click_data.color
+                                let obj_mesh = null
+                                data.interactiveObjects.map(obj => {
+                                    if (obj.name === obj_name) {
+                                        obj_mesh = obj
+                                    }
+                                })
+                                if (!obj_mesh) {
+                                    console.error(`mesh with given id ${obj_name} not found!`)
+                                    return
+                                }
+
+                                if (obj_mesh.material instanceof THREE.Material) {
+                                    if (data.pointedObject === obj_mesh) {
+                                        this.highlight_effect(obj_mesh, -1)
+                                    }
+                                    let mate = obj_mesh.material
+                                    let new_material = new THREE.MeshPhongMaterial({
+                                        color: parseInt(obj_color, 16),
+                                        map: mate.map,
+                                        name: mate.name,
+                                        transparent: true,
+                                        emissive: mate.color,
+                                        emissiveIntensity: mate.emissiveIntensity,
+                                        opacity: mate.opacity
+                                    })
+
+                                    obj_mesh.material = new_material
+                                    if (data.pointedObject === obj_mesh) {
+                                        this.highlight_effect(obj_mesh, 1)
+                                    }
+                                } else {
+                                    if (data.pointedObject === obj_mesh) {
+                                        this.highlight_effect(obj_mesh, -1)
+                                    }
+                                    let new_materials = []
+                                    obj_mesh.material.map(mate => {
+                                        let new_material = new THREE.MeshPhongMaterial({
+                                            color: parseInt(obj_color, 16),
+                                            map: mate.map,
+                                            name: mate.name,
+                                            transparent: true,
+                                            emissive: mate.color,
+                                            emissiveIntensity: mate.emissiveIntensity,
+                                            opacity: mate.opacity
+                                        })
+                                        new_materials.push(new_material)
+                                    })
+
+                                    obj_mesh.material = new_materials
+                                    if (data.pointedObject === obj_mesh) {
+
+                                        this.highlight_effect(obj_mesh, 1)
+                                    }
+                                }
+                            }
+                        }
+                    })
 
                     // init rayCaster
                     data.rayCaster = new THREE.Raycaster;
@@ -286,7 +425,9 @@ class Three {
                                         console.error("config file format error in click_actions!")
                                         return
                                     }
-                                    
+                                    // console.log(Array.isArray(pointedObject.material), pointedObject.material instanceof THREE.Material)
+                                    // console.log(pointedObject.material, pointedObject, typeof pointedObject.material)
+                                    // debugger
                                     if (pointedObject.material instanceof THREE.Material) {
                                         let mate = pointedObject.material
                                         let new_material = new THREE.MeshPhongMaterial({
@@ -407,6 +548,21 @@ class Three {
                     document.body.appendChild(iframe);
                     let iframeDoc=iframe.contentDocument||iframe.contentWindow.document;
                     iframeDoc.body.innerHTML=html_string;
+                    html2canvas(iframeDoc.body).then(canvas => {
+                        document.body.removeChild(iframe);
+                        const texture = new THREE.CanvasTexture(canvas)
+                        texture.minFilter = THREE.LinearFilter
+                        texture.needsUpdate = false
+                        const material = new THREE.SpriteMaterial( { map: texture } );
+                        const sprite = new THREE.Sprite( material );
+                        sprite.scale.set(canvas.width, canvas.height, 0)
+                        sprite.name = object.name
+                        sprite.position.set(object.position.x, object.position.y + cls_inst.config.card_style.height, object.position.z)
+                        object.sprite = sprite
+                        sprite.visible = default_visible
+                        this.data.current_sprites.push(sprite)
+                        object.parent.add(sprite)
+                    });
                 }
             },
             highlight_effect(object, isAdd) {
@@ -496,7 +652,7 @@ class Three {
     }
 }
 
-fetch("./config.json")
+fetch("./config_jixie.json")
     .then(response => response.json())
     .then(json => {
         let three = new Three(json)

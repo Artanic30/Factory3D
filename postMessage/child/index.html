@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>POST Handler</title>
+        <script type="text/JavaScript">
+            window.addEventListener("message", function( event ) {
+                // 监听父窗口发送过来的数据向服务器发送post请求
+                var data = event.data;
+                setTimeout(() => {
+                    window.parent.postMessage(data, "*"); 
+                }, 3000);
+            }, false);
+
+            setTimeout(() => {
+                    window.parent.postMessage({
+                        content: 'requestSetting'
+                    }, "*"); 
+                }, 3000);
+        </script>
+    </head>
+
+    <body>
+        <h1>Post message handler</h1>
+    </body>
+</html>

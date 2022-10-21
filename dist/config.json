@@ -1,15 +1,15 @@
 {
   "allow_move": true,
-  "model_path": "./jixie/zong.FBX",
+  "model_path": "./房间/房间.FBX",
   "camera_position": {
-    "x": 1500,
-    "y": 1300,
-    "z": 2600
+    "x": 200,
+    "y": 50,
+    "z": 0
   },
   "target_position": {
-    "x": 1400,
-    "y": 1250,
-    "z": 2000
+    "x": 0,
+    "y": 50,
+    "z": 0
   },
   "background": "black",
   "status_style": {
@@ -41,7 +41,7 @@
     "emissiveIntensity": 0.2
   },
   "card_style": {
-    "height": 2050
+    "height": 250
   },
   "card_update": {
     "event_name": "update_card"
@@ -73,24 +73,7 @@
     "event_name": "object_loaded"
   },
   "object_settings": {
-    "001": {
-      "is_interactive": true,
-      "status": "normal",
-      "card_html": "<div style=\"height: 500px;width: 800px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
-      "show_card": true,
-      "click_actions": {
-        "type": "changeColor",
-        "color": "0x92FDFF"
-      }
-    },
-    "002": {
-      "is_interactive": true,
-      "status": "normal",
-      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
-      "show_card": true,
-      "click_actions": null
-    },
-    "003": {
+    "房间001": {
       "is_interactive": true,
       "status": "normal",
       "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
@@ -100,12 +83,45 @@
         "color": "0x92FDFF"
       }
     },
-    "004": {
+    "房间002": {
       "is_interactive": true,
       "status": "normal",
       "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
       "show_card": false,
-      "click_actions": null
+      "click_actions": {
+        "type": "changeColor",
+        "color": "0x92FDFF"
+      }
+    },
+    "房间003": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": {
+        "type": "changeColor",
+        "color": "0x92FDFF"
+      }
+    },
+    "房间004": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": {
+        "type": "changeColor",
+        "color": "0x92FDFF"
+      }
+    },
+    "房间005": {
+      "is_interactive": true,
+      "status": "normal",
+      "card_html": "<div style=\"height: 150px;width: 300px;margin: -10px -10px -10px -10px;background: #f5da55;text-align: center;border: solid red 5px\">    <h4 style=\"color: #000; \">Hello world!</h4><h4 style=\"color: #000; \">template</h4></div>",
+      "show_card": false,
+      "click_actions": {
+        "type": "changeColor",
+        "color": "#92FDFF"
+      }
     }
   },
   "change_color_outside": {
